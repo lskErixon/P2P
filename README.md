@@ -16,15 +16,16 @@ Communication is handled via **TCP sockets**, and persistent data storage is pro
 ## Project Architecture
 
 The project follows **MVC principles implemented manually** (without frameworks).
-
+```
 BankNode/
-├── Config/ # Application configuration (config.json)
-├── Controllers/ # Command parsing and routing
-├── Services/ # Business logic (bank operations)
-├── Data/ # Database access layer (MySQL)
-├── Networking/ # TCP server
-├── Program.cs # Application entry point
-└── BankNode.csproj
+├── Config/              # Application configuration (config.json)
+├── Controllers/         # Command parsing and routing
+├── Services/            # Business logic (bank operations)
+├── Data/                # Database access layer (MySQL)
+├── Networking/          # TCP server
+├── Program.cs           # Application entry point
+└── BankNode.csproj      # Project file
+```
 
 ### Layer responsibilities
 - **Controller** – parses and validates incoming commands
