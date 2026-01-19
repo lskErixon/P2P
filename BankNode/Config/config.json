@@ -1,0 +1,12 @@
+{
+  "BankName": "MojeBanka",
+  "BankIp": "127.0.0.1",
+  "Port": 65532,
+  "Database": {
+    "Host": "localhost",
+    "Port": 3306,
+    "User": "root",
+    "Password": "heslo",
+    "Database": "banknode"
+  }
+}
