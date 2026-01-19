@@ -10,5 +10,11 @@
     <ItemGroup>
       <PackageReference Include="MySqlConnector" Version="2.5.0" />
     </ItemGroup>
+	<ItemGroup>
+ 	 <None Include="Config/config.json">
+   	 <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+</ItemGroup>
 
 </Project>
+

@@ -1,9 +1,13 @@
 ﻿using BankNode.Config;
 using BankNode.Data;
 
-var config = AppConfig.Load("Config/config.json");
+var cfg = AppConfig.Load("Config/config.json");
 
-var db = new MySqlDb(config.Database);
-using var conn = db.Open();
+var db = new MySqlDb(cfg.Database);
+using var cn = db.Open();
 
-Console.WriteLine("MySQL OK");
+using var cmd = cn.CreateCommand();
+cmd.CommandText = "SELECT 1;";
+var result = cmd.ExecuteScalar();
+
+Console.WriteLine($"MySQL OK, SELECT 1 = {result}");
