@@ -49,7 +49,6 @@ public sealed class AccountRepository
 
     public void Withdraw(string accountId, int amount)
     {
-        // bezpečné odečtení: jen když bude dost peněz
         using var cn = _db.Open();
         using var cmd = cn.CreateCommand();
         cmd.CommandText = """
